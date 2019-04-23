@@ -58,9 +58,13 @@ namespace DBUnitTesting.Tests
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction RowCountCompany_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(СompanyTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction RowCountCompany_PretestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction RowCountCompany_PosttestAction;
             this.RowCountCompanyData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             RowCountCompany_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            RowCountCompany_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            RowCountCompany_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             // 
             // RowCountCompany_TestAction
             // 
@@ -79,9 +83,17 @@ namespace DBUnitTesting.Tests
             // 
             // RowCountCompanyData
             // 
-            this.RowCountCompanyData.PosttestAction = null;
-            this.RowCountCompanyData.PretestAction = null;
+            this.RowCountCompanyData.PosttestAction = RowCountCompany_PosttestAction;
+            this.RowCountCompanyData.PretestAction = RowCountCompany_PretestAction;
             this.RowCountCompanyData.TestAction = RowCountCompany_TestAction;
+            // 
+            // RowCountCompany_PretestAction
+            // 
+            resources.ApplyResources(RowCountCompany_PretestAction, "RowCountCompany_PretestAction");
+            // 
+            // RowCountCompany_PosttestAction
+            // 
+            resources.ApplyResources(RowCountCompany_PosttestAction, "RowCountCompany_PosttestAction");
         }
 
         #endregion
