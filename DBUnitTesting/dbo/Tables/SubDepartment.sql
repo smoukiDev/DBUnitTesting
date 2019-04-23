@@ -8,7 +8,7 @@
     [CreatedBy]         NVARCHAR (50) NOT NULL,
     [ModifiedBy]        NVARCHAR (50) NULL,
     CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([SubDepartmentId] ASC),
-    CONSTRAINT [FK_SubDepartment_Department] FOREIGN KEY ([DepartmentId]) REFERENCES [dbo].[Department] ([DepartmentId])
+    CONSTRAINT [FK_SubDepartment_Department] FOREIGN KEY ([DepartmentId]) REFERENCES [dbo].[Department] ([DepartmentId]) ON DELETE CASCADE
 );
 
 

@@ -8,6 +8,6 @@
     [CreatedBy]      NVARCHAR (50) NOT NULL,
     [ModifiedBy]     NVARCHAR (50) NULL,
     CONSTRAINT [PK_Deaprtment] PRIMARY KEY CLUSTERED ([DepartmentId] ASC),
-    CONSTRAINT [FK_Department_Company] FOREIGN KEY ([CompanyId]) REFERENCES [dbo].[Company] ([CompanyId])
+    CONSTRAINT [FK_Department_Company] FOREIGN KEY ([CompanyId]) REFERENCES [dbo].[Company] ([CompanyId]) ON DELETE CASCADE
 );
 
