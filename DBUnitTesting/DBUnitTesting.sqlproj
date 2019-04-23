@@ -156,4 +156,7 @@
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DBUnitTesting.publish.xml" />
+  </ItemGroup>
 </Project>
