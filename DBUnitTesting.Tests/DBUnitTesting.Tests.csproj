@@ -66,6 +66,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DepartmentTests.cs">
+      <SubType>Designer</SubType>
+    </Compile>
     <Compile Include="СompanyTests.cs">
       <SubType>Designer</SubType>
     </Compile>
@@ -77,6 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DepartmentTests.resx">
+      <DependentUpon>DepartmentTests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="СompanyTests.resx">
       <DependentUpon>СompanyTests.cs</DependentUpon>
     </EmbeddedResource>
