@@ -132,31 +132,6 @@ you expect.
 
 SELECT count(*) FROM [Company];</value>
   </data>
-  <data name="RowCountCompany_PosttestAction.SqlScript" xml:space="preserve">
-    <value>/*
-Add SQL statements here that you want to run after 
-the test script is run.
-
-In the lower pane, you can add test conditions that verify 
-whether the results of your SQL statements match what 
-you expect.
-*/
-DELETE FROM COMPANY;</value>
-  </data>
-  <data name="RowCountCompany_PretestAction.SqlScript" xml:space="preserve">
-    <value>/*
-Add SQL statements here that you want to run before
-the test script is run.
-
-In the lower pane, you can add test conditions that verify 
-whether the results of your SQL statements match what 
-you expect.
-*/
-INSERT INTO [Company] ([CompanyName],[IsActive],[CreatedDate],[ModifiedDate],[CreatedBy],[ModifiedBy])VALUES('Gaja Digital Agency',1,getutcdate(),NULL,'System',NULL)
-INSERT INTO [Company] ([CompanyName],[IsActive],[CreatedDate],[ModifiedDate],[CreatedBy],[ModifiedBy])VALUES('Palmex',1,getutcdate(),NULL,'System',NULL)
-INSERT INTO [Company] ([CompanyName],[IsActive],[CreatedDate],[ModifiedDate],[CreatedBy],[ModifiedBy])VALUES('Arsha Consulting',1,getutcdate(),NULL,'System',NULL)
-INSERT INTO [Company] ([CompanyName],[IsActive],[CreatedDate],[ModifiedDate],[CreatedBy],[ModifiedBy])VALUES('Toboc',1,getutcdate(),NULL,'System',NULL)</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
