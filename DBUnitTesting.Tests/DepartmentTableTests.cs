@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DBUnitTesting.Tests
 {
     [TestClass()]
-    public class DepartmentTests : SqlDatabaseTestClass
+    public class DepartmentTableTests : SqlDatabaseTestClass
     {
 
-        public DepartmentTests()
+        public DepartmentTableTests()
         {
             InitializeComponent();
         }
@@ -84,7 +84,7 @@ namespace DBUnitTesting.Tests
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Proc_SaveDepartment_AddOneDepartmentToTable_TestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ExecutionTimeCondition executionTimeCondition1;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentTests));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentTableTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition2;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;

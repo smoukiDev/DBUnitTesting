@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DBUnitTesting.Tests
 {
     [TestClass()]
-    public class СompanyTests : SqlDatabaseTestClass
+    public class FetchDetailsViewTests : SqlDatabaseTestClass
     {
 
-        public СompanyTests()
+        public FetchDetailsViewTests()
         {
             InitializeComponent();
         }
@@ -30,9 +30,9 @@ namespace DBUnitTesting.Tests
         }
 
         [TestMethod()]
-        public void RowCountCompany()
+        public void FetchDetails_RetrieveCorrectRowCount()
         {
-            SqlDatabaseTestActions testActions = this.RowCountCompanyData;
+            SqlDatabaseTestActions testActions = this.FetchDetails_RetrieveCorrectRowCountData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -55,33 +55,30 @@ namespace DBUnitTesting.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction RowCountCompany_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(СompanyTests));
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
-            this.RowCountCompanyData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            RowCountCompany_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction FetchDetails_RetrieveCorrectRowCount_TestAction;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FetchDetailsViewTests));
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition FetchDetailsRowCount;
+            this.FetchDetails_RetrieveCorrectRowCountData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            FetchDetails_RetrieveCorrectRowCount_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            FetchDetailsRowCount = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
-            // RowCountCompany_TestAction
+            // FetchDetails_RetrieveCorrectRowCountData
             // 
-            RowCountCompany_TestAction.Conditions.Add(scalarValueCondition1);
-            resources.ApplyResources(RowCountCompany_TestAction, "RowCountCompany_TestAction");
+            this.FetchDetails_RetrieveCorrectRowCountData.PosttestAction = null;
+            this.FetchDetails_RetrieveCorrectRowCountData.PretestAction = null;
+            this.FetchDetails_RetrieveCorrectRowCountData.TestAction = FetchDetails_RetrieveCorrectRowCount_TestAction;
             // 
-            // scalarValueCondition1
+            // FetchDetails_RetrieveCorrectRowCount_TestAction
             // 
-            scalarValueCondition1.ColumnNumber = 1;
-            scalarValueCondition1.Enabled = true;
-            scalarValueCondition1.ExpectedValue = "4";
-            scalarValueCondition1.Name = "scalarValueCondition1";
-            scalarValueCondition1.NullExpected = false;
-            scalarValueCondition1.ResultSet = 1;
-            scalarValueCondition1.RowNumber = 1;
+            FetchDetails_RetrieveCorrectRowCount_TestAction.Conditions.Add(FetchDetailsRowCount);
+            resources.ApplyResources(FetchDetails_RetrieveCorrectRowCount_TestAction, "FetchDetails_RetrieveCorrectRowCount_TestAction");
             // 
-            // RowCountCompanyData
+            // FetchDetailsRowCount
             // 
-            this.RowCountCompanyData.PosttestAction = null;
-            this.RowCountCompanyData.PretestAction = null;
-            this.RowCountCompanyData.TestAction = RowCountCompany_TestAction;
+            FetchDetailsRowCount.Enabled = true;
+            FetchDetailsRowCount.Name = "FetchDetailsRowCount";
+            FetchDetailsRowCount.ResultSet = 1;
+            FetchDetailsRowCount.RowCount = 9;
         }
 
         #endregion
@@ -101,6 +98,6 @@ namespace DBUnitTesting.Tests
         //
         #endregion
 
-        private SqlDatabaseTestActions RowCountCompanyData;
+        private SqlDatabaseTestActions FetchDetails_RetrieveCorrectRowCountData;
     }
 }

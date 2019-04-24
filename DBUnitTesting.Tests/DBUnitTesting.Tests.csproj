@@ -66,10 +66,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DepartmentTests.cs">
+    <Compile Include="DepartmentTableTests.cs">
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Include="СompanyTests.cs">
+    <Compile Include="FetchDetailsViewTests.cs">
+      <SubType>Designer</SubType>
+    </Compile>
+    <Compile Include="CompanyTableTests.cs">
       <SubType>Designer</SubType>
     </Compile>
     <Compile Include="SqlDatabaseSetup.cs" />
@@ -80,11 +83,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DepartmentTests.resx">
-      <DependentUpon>DepartmentTests.cs</DependentUpon>
+    <EmbeddedResource Include="DepartmentTableTests.resx">
+      <DependentUpon>DepartmentTableTests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="СompanyTests.resx">
-      <DependentUpon>СompanyTests.cs</DependentUpon>
+    <EmbeddedResource Include="CompanyTableTests.resx">
+      <DependentUpon>CompanyTableTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FetchDetailsViewTests.resx">
+      <DependentUpon>FetchDetailsViewTests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup Condition="$(VisualStudioVersion) == '15.0'">
