@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DBUnitTesting.Tests
 {
     [TestClass()]
-    public class SubDepartmentTests : SqlDatabaseTestClass
+    public class SubDepartmentTableTests : SqlDatabaseTestClass
     {
 
-        public SubDepartmentTests()
+        public SubDepartmentTableTests()
         {
             InitializeComponent();
         }
@@ -30,9 +30,9 @@ namespace DBUnitTesting.Tests
         }
 
         [TestMethod()]
-        public void Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable()
+        public void Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable()
         {
-            SqlDatabaseTestActions testActions = this.Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData;
+            SqlDatabaseTestActions testActions = this.Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -55,23 +55,23 @@ namespace DBUnitTesting.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubDepartmentTests));
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubDepartmentTableTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition SubDepartmentLogRowCount;
-            this.Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            this.Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             SubDepartmentLogRowCount = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
-            // Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData
+            // Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData
             // 
-            this.Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData.PosttestAction = null;
-            this.Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData.PretestAction = null;
-            this.Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData.TestAction = Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction;
+            this.Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData.PosttestAction = null;
+            this.Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData.PretestAction = null;
+            this.Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData.TestAction = Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction;
             // 
-            // Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction
+            // Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction
             // 
-            Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction.Conditions.Add(SubDepartmentLogRowCount);
-            resources.ApplyResources(Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction, "Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTable_TestAction");
+            Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction.Conditions.Add(SubDepartmentLogRowCount);
+            resources.ApplyResources(Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction, "Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTable_TestAction");
             // 
             // SubDepartmentLogRowCount
             // 
@@ -98,6 +98,6 @@ namespace DBUnitTesting.Tests
         //
         #endregion
 
-        private SqlDatabaseTestActions Trigger_SubDepartment_Update_InsertsLogToSubDepartmentLogTableData;
+        private SqlDatabaseTestActions Trigger_SubDepartment_Update_InsertsLogRecordToSubDepartmentLogTableData;
     }
 }

@@ -30,9 +30,9 @@ namespace DBUnitTesting.Tests
         }
 
         [TestMethod()]
-        public void Company_RetrievesCorrectRowCount()
+        public void Table_Company_RetrievesCorrectRowCount()
         {
-            SqlDatabaseTestActions testActions = this.Company_RetrievesCorrectRowCountData;
+            SqlDatabaseTestActions testActions = this.Table_Company_RetrievesCorrectRowCountData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -55,17 +55,17 @@ namespace DBUnitTesting.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Company_RetrievesCorrectRowCount_TestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Table_Company_RetrievesCorrectRowCount_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyTableTests));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
-            this.Company_RetrievesCorrectRowCountData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            Company_RetrievesCorrectRowCount_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            this.Table_Company_RetrievesCorrectRowCountData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            Table_Company_RetrievesCorrectRowCount_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
             // 
-            // Company_RetrievesCorrectRowCount_TestAction
+            // Table_Company_RetrievesCorrectRowCount_TestAction
             // 
-            Company_RetrievesCorrectRowCount_TestAction.Conditions.Add(scalarValueCondition1);
-            resources.ApplyResources(Company_RetrievesCorrectRowCount_TestAction, "Company_RetrievesCorrectRowCount_TestAction");
+            Table_Company_RetrievesCorrectRowCount_TestAction.Conditions.Add(scalarValueCondition1);
+            resources.ApplyResources(Table_Company_RetrievesCorrectRowCount_TestAction, "Table_Company_RetrievesCorrectRowCount_TestAction");
             // 
             // scalarValueCondition1
             // 
@@ -77,11 +77,11 @@ namespace DBUnitTesting.Tests
             scalarValueCondition1.ResultSet = 1;
             scalarValueCondition1.RowNumber = 1;
             // 
-            // Company_RetrievesCorrectRowCountData
+            // Table_Company_RetrievesCorrectRowCountData
             // 
-            this.Company_RetrievesCorrectRowCountData.PosttestAction = null;
-            this.Company_RetrievesCorrectRowCountData.PretestAction = null;
-            this.Company_RetrievesCorrectRowCountData.TestAction = Company_RetrievesCorrectRowCount_TestAction;
+            this.Table_Company_RetrievesCorrectRowCountData.PosttestAction = null;
+            this.Table_Company_RetrievesCorrectRowCountData.PretestAction = null;
+            this.Table_Company_RetrievesCorrectRowCountData.TestAction = Table_Company_RetrievesCorrectRowCount_TestAction;
         }
 
         #endregion
@@ -101,6 +101,6 @@ namespace DBUnitTesting.Tests
         //
         #endregion
 
-        private SqlDatabaseTestActions Company_RetrievesCorrectRowCountData;
+        private SqlDatabaseTestActions Table_Company_RetrievesCorrectRowCountData;
     }
 }

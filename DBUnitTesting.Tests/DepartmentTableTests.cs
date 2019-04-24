@@ -30,9 +30,9 @@ namespace DBUnitTesting.Tests
         }
 
         [TestMethod()]
-        public void Proc_SaveDepartment_AddOneDepartmentToTable()
+        public void Procedure_SaveDepartment_AddOneDepartmentToTable()
         {
-            SqlDatabaseTestActions testActions = this.Proc_SaveDepartment_AddOneDepartmentToTableData;
+            SqlDatabaseTestActions testActions = this.Procedure_SaveDepartment_AddOneDepartmentToTableData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -47,9 +47,9 @@ namespace DBUnitTesting.Tests
             SqlExecutionResult[] posttestResults = TestService.Execute(this.PrivilegedContext, this.PrivilegedContext, testActions.PosttestAction);
         }
         [TestMethod()]
-        public void Func_GetSearchTermCount_SuccessfullyFindsDepartments()
+        public void Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring()
         {
-            SqlDatabaseTestActions testActions = this.Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData;
+            SqlDatabaseTestActions testActions = this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -79,36 +79,30 @@ namespace DBUnitTesting.Tests
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Proc_SaveDepartment_AddOneDepartmentToTable_TestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ExecutionTimeCondition executionTimeCondition1;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentTableTests));
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ExecutionTimeCondition executionTimeCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition2;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
-            this.Proc_SaveDepartment_AddOneDepartmentToTableData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            this.Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition GetSearchTermCountScalarValueCondition;
+            this.Procedure_SaveDepartment_AddOneDepartmentToTableData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
-            Proc_SaveDepartment_AddOneDepartmentToTable_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             executionTimeCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ExecutionTimeCondition();
-            Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             rowCountCondition2 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
-            Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            GetSearchTermCountScalarValueCondition = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
             // 
-            // Proc_SaveDepartment_AddOneDepartmentToTableData
+            // Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction
             // 
-            this.Proc_SaveDepartment_AddOneDepartmentToTableData.PosttestAction = Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction;
-            this.Proc_SaveDepartment_AddOneDepartmentToTableData.PretestAction = Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction;
-            this.Proc_SaveDepartment_AddOneDepartmentToTableData.TestAction = Proc_SaveDepartment_AddOneDepartmentToTable_TestAction;
-            // 
-            // Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction
-            // 
-            Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction.Conditions.Add(rowCountCondition1);
-            resources.ApplyResources(Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction, "Proc_SaveDepartment_AddOneDepartmentToTable_PretestAction");
+            Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction.Conditions.Add(rowCountCondition1);
+            resources.ApplyResources(Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction, "Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction");
             // 
             // rowCountCondition1
             // 
@@ -117,10 +111,10 @@ namespace DBUnitTesting.Tests
             rowCountCondition1.ResultSet = 1;
             rowCountCondition1.RowCount = 6;
             // 
-            // Proc_SaveDepartment_AddOneDepartmentToTable_TestAction
+            // Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction
             // 
-            Proc_SaveDepartment_AddOneDepartmentToTable_TestAction.Conditions.Add(executionTimeCondition1);
-            resources.ApplyResources(Proc_SaveDepartment_AddOneDepartmentToTable_TestAction, "Proc_SaveDepartment_AddOneDepartmentToTable_TestAction");
+            Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction.Conditions.Add(executionTimeCondition1);
+            resources.ApplyResources(Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction, "Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction");
             // 
             // executionTimeCondition1
             // 
@@ -128,10 +122,10 @@ namespace DBUnitTesting.Tests
             executionTimeCondition1.ExecutionTime = System.TimeSpan.Parse("00:00:01");
             executionTimeCondition1.Name = "executionTimeCondition1";
             // 
-            // Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction
+            // Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction
             // 
-            Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction.Conditions.Add(rowCountCondition2);
-            resources.ApplyResources(Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction, "Proc_SaveDepartment_AddOneDepartmentToTable_PosttestAction");
+            Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction.Conditions.Add(rowCountCondition2);
+            resources.ApplyResources(Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction, "Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction");
             // 
             // rowCountCondition2
             // 
@@ -140,26 +134,33 @@ namespace DBUnitTesting.Tests
             rowCountCondition2.ResultSet = 1;
             rowCountCondition2.RowCount = 7;
             // 
-            // Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData
+            // Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction
             // 
-            this.Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData.PosttestAction = null;
-            this.Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData.PretestAction = null;
-            this.Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData.TestAction = Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction;
+            Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction.Conditions.Add(GetSearchTermCountScalarValueCondition);
+            resources.ApplyResources(Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction, "Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction" +
+                    "");
             // 
-            // Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction
+            // GetSearchTermCountScalarValueCondition
             // 
-            Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction.Conditions.Add(scalarValueCondition1);
-            resources.ApplyResources(Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction, "Func_GetSearchTermCount_SuccessfullyFindsDepartments_TestAction");
+            GetSearchTermCountScalarValueCondition.ColumnNumber = 1;
+            GetSearchTermCountScalarValueCondition.Enabled = true;
+            GetSearchTermCountScalarValueCondition.ExpectedValue = "2";
+            GetSearchTermCountScalarValueCondition.Name = "GetSearchTermCountScalarValueCondition";
+            GetSearchTermCountScalarValueCondition.NullExpected = false;
+            GetSearchTermCountScalarValueCondition.ResultSet = 1;
+            GetSearchTermCountScalarValueCondition.RowNumber = 1;
             // 
-            // scalarValueCondition1
+            // Procedure_SaveDepartment_AddOneDepartmentToTableData
             // 
-            scalarValueCondition1.ColumnNumber = 1;
-            scalarValueCondition1.Enabled = true;
-            scalarValueCondition1.ExpectedValue = "2";
-            scalarValueCondition1.Name = "scalarValueCondition1";
-            scalarValueCondition1.NullExpected = false;
-            scalarValueCondition1.ResultSet = 1;
-            scalarValueCondition1.RowNumber = 1;
+            this.Procedure_SaveDepartment_AddOneDepartmentToTableData.PosttestAction = Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction;
+            this.Procedure_SaveDepartment_AddOneDepartmentToTableData.PretestAction = Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction;
+            this.Procedure_SaveDepartment_AddOneDepartmentToTableData.TestAction = Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction;
+            // 
+            // Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData
+            // 
+            this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.PosttestAction = null;
+            this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.PretestAction = null;
+            this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.TestAction = Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction;
         }
 
         #endregion
@@ -179,7 +180,7 @@ namespace DBUnitTesting.Tests
         //
         #endregion
 
-        private SqlDatabaseTestActions Proc_SaveDepartment_AddOneDepartmentToTableData;
-        private SqlDatabaseTestActions Func_GetSearchTermCount_SuccessfullyFindsDepartmentsData;
+        private SqlDatabaseTestActions Procedure_SaveDepartment_AddOneDepartmentToTableData;
+        private SqlDatabaseTestActions Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData;
     }
 }

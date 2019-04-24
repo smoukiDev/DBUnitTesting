@@ -62,12 +62,6 @@ namespace DBUnitTesting.Tests
             FetchDetails_RetrieveCorrectRowCount_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             FetchDetailsRowCount = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
-            // FetchDetails_RetrieveCorrectRowCountData
-            // 
-            this.FetchDetails_RetrieveCorrectRowCountData.PosttestAction = null;
-            this.FetchDetails_RetrieveCorrectRowCountData.PretestAction = null;
-            this.FetchDetails_RetrieveCorrectRowCountData.TestAction = FetchDetails_RetrieveCorrectRowCount_TestAction;
-            // 
             // FetchDetails_RetrieveCorrectRowCount_TestAction
             // 
             FetchDetails_RetrieveCorrectRowCount_TestAction.Conditions.Add(FetchDetailsRowCount);
@@ -79,6 +73,12 @@ namespace DBUnitTesting.Tests
             FetchDetailsRowCount.Name = "FetchDetailsRowCount";
             FetchDetailsRowCount.ResultSet = 1;
             FetchDetailsRowCount.RowCount = 9;
+            // 
+            // FetchDetails_RetrieveCorrectRowCountData
+            // 
+            this.FetchDetails_RetrieveCorrectRowCountData.PosttestAction = null;
+            this.FetchDetails_RetrieveCorrectRowCountData.PretestAction = null;
+            this.FetchDetails_RetrieveCorrectRowCountData.TestAction = FetchDetails_RetrieveCorrectRowCount_TestAction;
         }
 
         #endregion
