@@ -88,6 +88,9 @@ namespace DBUnitTesting.Tests
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition2;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition GetSearchTermCountScalarValueCondition;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition3;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition4;
             this.Procedure_SaveDepartment_AddOneDepartmentToTableData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
@@ -98,6 +101,9 @@ namespace DBUnitTesting.Tests
             rowCountCondition2 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             GetSearchTermCountScalarValueCondition = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            rowCountCondition3 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
+            rowCountCondition4 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             // 
             // Procedure_SaveDepartment_AddOneDepartmentToTable_PretestAction
             // 
@@ -114,6 +120,8 @@ namespace DBUnitTesting.Tests
             // Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction
             // 
             Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction.Conditions.Add(executionTimeCondition1);
+            Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction.Conditions.Add(scalarValueCondition1);
+            Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction.Conditions.Add(rowCountCondition3);
             resources.ApplyResources(Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction, "Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction");
             // 
             // executionTimeCondition1
@@ -125,6 +133,7 @@ namespace DBUnitTesting.Tests
             // Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction
             // 
             Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction.Conditions.Add(rowCountCondition2);
+            Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction.Conditions.Add(rowCountCondition4);
             resources.ApplyResources(Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction, "Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction");
             // 
             // rowCountCondition2
@@ -161,6 +170,30 @@ namespace DBUnitTesting.Tests
             this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.PosttestAction = null;
             this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.PretestAction = null;
             this.Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstringData.TestAction = Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction;
+            // 
+            // scalarValueCondition1
+            // 
+            scalarValueCondition1.ColumnNumber = 1;
+            scalarValueCondition1.Enabled = true;
+            scalarValueCondition1.ExpectedValue = "0";
+            scalarValueCondition1.Name = "scalarValueCondition1";
+            scalarValueCondition1.NullExpected = false;
+            scalarValueCondition1.ResultSet = 1;
+            scalarValueCondition1.RowNumber = 1;
+            // 
+            // rowCountCondition3
+            // 
+            rowCountCondition3.Enabled = true;
+            rowCountCondition3.Name = "rowCountCondition3";
+            rowCountCondition3.ResultSet = 2;
+            rowCountCondition3.RowCount = 7;
+            // 
+            // rowCountCondition4
+            // 
+            rowCountCondition4.Enabled = true;
+            rowCountCondition4.Name = "rowCountCondition4";
+            rowCountCondition4.ResultSet = 2;
+            rowCountCondition4.RowCount = 6;
         }
 
         #endregion

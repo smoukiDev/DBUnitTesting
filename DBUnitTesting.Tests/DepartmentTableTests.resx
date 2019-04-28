@@ -121,7 +121,10 @@
     <value>SELECT * FROM [dbo].[Department];</value>
   </data>
   <data name="Procedure_SaveDepartment_AddOneDepartmentToTable_TestAction.SqlScript" xml:space="preserve">
-    <value>EXEC [SaveDepartment] 'Dummy', 4, 1;</value>
+    <value>DECLARE @result int;
+EXEC @result = [dbo].[SaveDepartment] 'Dummy', 4, 1;
+SELECT @result;
+SELECT * FROM [dbo].[Department];</value>
   </data>
   <data name="Procedure_SaveDepartment_AddOneDepartmentToTable_PosttestAction.SqlScript" xml:space="preserve">
     <value>/*
@@ -133,8 +136,8 @@ whether the results of your SQL statements match what
 you expect.
 */
 SELECT * FROM [Department];
-
-DELETE FROM [Department] WHERE [DepartmentId] &gt; 6;</value>
+DELETE FROM [Department] WHERE [DepartmentId] &gt; 6;
+SELECT * FROM [dbo].[Department];</value>
   </data>
   <data name="Function_GetSearchTermCount_FindsDepartmentsWhichNameContainsSubstring_TestAction.SqlScript" xml:space="preserve">
     <value>SELECT [dbo].[GetSearchTermCount]('ent');</value>
