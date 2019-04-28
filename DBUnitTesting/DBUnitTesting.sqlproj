@@ -155,6 +155,9 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <PostDeploy Include="dbo\PostDeployment.sql">
+      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
+    </PostDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="DBUnitTesting.publish.xml" />
